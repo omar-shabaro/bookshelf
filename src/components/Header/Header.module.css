@@ -1,0 +1,154 @@
+.wrap {
+    background: var(--primary);
+    color: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex-grow: 1;
+
+    img {
+        height: 32px;
+    }
+}
+
+
+.nav {
+    display: flex;
+    gap: 1.2rem;
+    font-weight: 500;
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--ink);
+    }
+}
+
+.dropdownArrow {
+    display: inline-block;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--color-white);
+    vertical-align: middle;
+}
+
+a.active {
+    color: var(--ink);
+
+    .dropdownArrow {
+        border-top-color: var(--ink);
+    }
+}
+
+.burger {
+    display: inline-flex;
+    background: transparent;
+    border: 0;
+    padding: 5px;
+    color: var(--color-white);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.burgerIcon {
+    width: 24px;
+    height: 2px;
+    background: var(--color-white);
+    position: relative;
+    border-radius: 1px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--color-white);
+        border-radius: 1px;
+    }
+
+    &::before {
+        top: -6px
+    }
+
+    &::after {
+        top: 6px
+    }
+}
+
+.iconBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+    color: var(--color-white);
+    cursor: pointer;
+    margin-left: var(--space);
+
+    &::focus-visible {
+        outline: 2px solid var(--color-white);
+        outline-offset: 2px;
+    }
+}
+
+
+/* mobile first: hide nav behind toggle */
+@media (max-width: 767px) {
+
+    .logo {
+        flex-grow: 0;
+    }
+
+    .iconBtn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav {
+        position: absolute;
+        inset: 69px 0 auto 0;
+        background: var(--primary);
+        padding: 1rem;
+        flex-direction: column;
+        transform: translateY(-140%);
+        transition: transform .22s ease;
+    }
+
+    .open {
+        transform: translateY(0)
+    }
+}
+
+/* tablet+ */
+@media (min-width:768px) {
+    .burger {
+        display: none
+    }
+
+
+}

@@ -1,0 +1,38 @@
+.card {
+    width: 100%;
+}
+
+.cover {
+    width: 100%;
+}
+
+.meta {
+    padding: 5px 0;
+}
+
+.title {
+    margin: 5px 0 3px;
+    font-size: .90rem;
+}
+
+.by {
+    margin: 0;
+    color: var(--muted);
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.rev {
+    margin: 0;
+    color: var(--muted);
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.dark {
+
+    .by,
+    .rev {
+        color: var(--color-primary);
+    }
+}

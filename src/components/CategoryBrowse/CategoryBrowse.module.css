@@ -1,0 +1,57 @@
+.grid {
+    --cols: 1;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+}
+
+.card {
+    padding: 16px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+
+    &::hover {
+        box-shadow: 0 3px 18px rgba(0, 0, 0, .05)
+    }
+}
+
+.sectionHeader {
+    font-weight: normal;
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-top: 2px
+}
+
+.title {
+    font-size: 1rem;
+    margin: 0 0 6px
+}
+
+.desc {
+    color: var(--muted);
+    margin: 0;
+    font-size: .92rem
+}
+
+/* on tablet+ */
+@media (min-width:768px) {
+    .card {
+        padding: 8px 16px 0 0;
+    }
+
+    .grid {
+        --cols: 2;
+    }
+}
+
+/* on desktop+ */
+@media (min-width:1024px) {
+    .grid {
+        --cols: 4;
+    }
+}

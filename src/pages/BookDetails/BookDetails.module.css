@@ -1,0 +1,61 @@
+/* layout: stacked on mobile, 2 columns on tablet+ */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 2fr;
+        gap: 32px;
+        align-items: start;
+    }
+}
+
+
+.cover {
+    margin-top: 0;
+}
+
+.cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+    object-fit: cover;
+}
+
+/* meta text */
+.meta {
+    display: grid;
+    gap: 12px;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.sub {
+    margin: 0;
+}
+
+.desc {
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.muted {
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+/* actions */
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
