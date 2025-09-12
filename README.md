@@ -5,6 +5,13 @@ Focus on **clean code, accessibility, SEO basics, and best practices**.
 
 ---
 
+## 📦 Requirements
+
+- Node.js **18+** (tested with **Node.js 22.17.0**)  
+- npm **9+** (tested with **npm 11.5.2**)  
+
+---
+
 ## 🛠️ Getting Started
 
 1. **Install dependencies**
