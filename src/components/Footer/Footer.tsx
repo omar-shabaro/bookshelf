@@ -32,7 +32,7 @@ const Footer = () => {
                     <div className={styles.section}>
                         <h3 className={styles.h}>Follow Us</h3>
                         <ul>
-                            <li><a href="#" rel="noopener">Facebook</a></li>
+                            <li><a href="#" rel="noopener">Facebook</a></li> // Add rel="noopener" for security
                             <li><a href="#" rel="noopener">Twitter</a></li>
                             <li><a href="#" rel="noopener">RSS</a></li>
                         </ul>

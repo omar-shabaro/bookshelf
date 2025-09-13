@@ -52,7 +52,6 @@
     color: var(--muted);
 }
 
-/* actions */
 .actions {
     display: flex;
     gap: 12px;

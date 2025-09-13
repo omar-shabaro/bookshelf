@@ -8,7 +8,7 @@ const NotFound = () => {
             <section className="section container" aria-labelledby="notfound-heading">
                 <h1 id="notfound-heading">404 - Page Not Found | BooksReviews</h1>
                 <p>Sorry, the page you’re looking for doesn’t exist.</p>
-                <Link to="/" className="btn">
+                <Link to="/" className="btn btn-primary">
                     Go back home
                 </Link>
             </section>

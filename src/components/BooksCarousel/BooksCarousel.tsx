@@ -22,6 +22,7 @@ const BooksCarousel = ({ slug, title, dark }: BookCarousel) => {
     const scrollByCards = (dir: 1 | -1) => {
         const el = scrollerRef.current;
         if (!el) return;
+        // first card to get width we can also use hardcoded value or use useRef on the first card but this is simpler
         const item = el.querySelector<HTMLElement>("[data-card]");
         const cardWidth = item ? item.offsetWidth : el.clientWidth;
         el.scrollBy({ left: dir * (cardWidth + 32) * 1.0, behavior: "smooth" });
@@ -34,13 +35,14 @@ const BooksCarousel = ({ slug, title, dark }: BookCarousel) => {
     return (
         <section className={`${styles.wrap} ${dark ? styles.dark : styles.light}`} aria-labelledby={`${slug}-heading`}>
             <div className="container section relative">
-                <button className={`${styles.ctrl} ${styles.ctrlLeft}`} onClick={() => scrollByCards(-1)} aria-label="Scroll left">  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                ><polyline points="15 18 9 12 15 6" /></svg>
+                <button className={`${styles.ctrl} ${styles.ctrlLeft}`} onClick={() => scrollByCards(-1)} aria-label="Scroll left">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                    ><polyline points="15 18 9 12 15 6" /></svg>
                 </button>
                 <button className={`${styles.ctrl} ${styles.ctrlRight}`} onClick={() => scrollByCards(1)} aria-label="Scroll right">  <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +64,6 @@ const BooksCarousel = ({ slug, title, dark }: BookCarousel) => {
                         </div>
                     ))}
                 </div>
-
-
             </div>
         </section>
     );
