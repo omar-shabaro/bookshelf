@@ -26,7 +26,7 @@
 
 .nav {
     display: flex;
-    gap: 1.2rem;
+    gap: 20px;
     font-weight: 500;
 }
 
@@ -133,7 +133,7 @@ a.active {
         position: absolute;
         inset: 69px 0 auto 0;
         background: var(--primary);
-        padding: 1rem;
+        padding: 16px;
         flex-direction: column;
         transform: translateY(-140%);
         transition: transform .22s ease;

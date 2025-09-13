@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.minimumTopSpace {
+    padding-top: 5px;
+}
+
 .dark {
     background: var(--bg-dark-secondary);
     color: var(--color-white);
@@ -10,12 +14,6 @@
 .light {
     background: var(--bg-light);
     color: var(--ink);
-}
-
-.controls {
-    display: flex;
-    gap: .5rem;
-    position: relative;
 }
 
 .ctrl {

@@ -10,7 +10,7 @@ const Books = () => {
             <BooksCarousel slug="nonfiction" title="Nonfiction" />
             <BooksCarousel slug="fiction" title="Fiction" dark />
             <BooksCarousel slug="children" title="Children's" />
-            <BooksCarousel slug="self_improvement" title="Self Improvement" dark />
+            <BooksCarousel slug="self_improvement" title="Self Improvement" dark minimumTopSpace />
         </>
     );
 }

@@ -6,7 +6,7 @@ import BookCard from "../BookCard";
 import LoadingSpinner from "../LoadingSpinner";
 
 
-const BooksCarousel = ({ slug, title, dark }: BookCarousel) => {
+const BooksCarousel = ({ slug, title, dark, minimumTopSpace }: BookCarousel) => {
     const [books, setBooks] = useState<Book[]>([]);
     const [err, setErr] = useState<string | null>(null);
     const scrollerRef = useRef<HTMLDivElement>(null);
@@ -33,8 +33,9 @@ const BooksCarousel = ({ slug, title, dark }: BookCarousel) => {
     if (!books.length) return null;
 
     return (
-        <section className={`${styles.wrap} ${dark ? styles.dark : styles.light}`} aria-labelledby={`${slug}-heading`}>
-            <div className="container section relative">
+        <section className={`${styles.wrap} ${dark ? styles.dark : styles.light}`}
+            aria-labelledby={`${slug}-heading`}>
+            <div className={`container section relative ${minimumTopSpace ? styles.minimumTopSpace : ""}`}>
                 <button className={`${styles.ctrl} ${styles.ctrlLeft}`} onClick={() => scrollByCards(-1)} aria-label="Scroll left">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

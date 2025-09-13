@@ -28,6 +28,9 @@ export type BookCarousel = {
     slug: string;
     title: string;
     dark?: boolean;
+    // for future use
+    gradient?: boolean;
+    minimumTopSpace?: boolean;
 };
 
 export type NavLinks = {
